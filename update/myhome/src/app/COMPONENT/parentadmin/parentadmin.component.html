@@ -1,0 +1,65 @@
+<!-- 
+<a routerLink="admin">admin</a>
+<div class="container" >
+<button   type="button" routerLink="admin" class="btn btn-success" >ADMIN</button>
+<button   type="button"  routerLink="productadmin"  class="btn btn-success" >PRODUCT</button>
+<router-outlet></router-outlet>
+</div>
+
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+      The current link item
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+    <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+    <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+    <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
+  </div> -->
+
+
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-TRANSPARENT fixed-top">
+      <div class="container-fluid">
+  
+        <a class="navbar-brand" > &nbsp;
+          <img src="https://vlebazaar.in/image/cache/catalog/logo/logo/logo1-200x75.png" srcset="https://vlebazaar.in/image/cache/catalog/logo/logo/logo1-200x75.png 1x, https://vlebazaar.in/image/cache/catalog/logo/logo-898x338.png 2x" width="100" height="60" alt="Vlebazaar.in" title="Vlebazaar.in">
+      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto  mb-lg-0" style="margin-right: 148px;">
+  
+  
+  
+        
+            
+           
+  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+              LOGIN
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a routerLink="admin"  class="dropdown-item" href="#">ADMINPANEL</a></li>
+                <li><a  routerLink="productadmin" class="dropdown-item" href="#">PRODUCTPANEL</a></li>
+                
+              </ul>
+            </li>
+  
+          </ul>
+         
+        </div>
+      </div>
+    </nav>
+  
+  </header>
+  
+  <div class="d-flex bg-img flex-column w-100 justify-content-center">
+    <router-outlet></router-outlet>
+    </div>
+  

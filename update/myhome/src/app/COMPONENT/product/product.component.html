@@ -1,0 +1,480 @@
+<app-header></app-header>
+
+<!-- <div class="card-top container-fluid  ">
+<div class="container d-flex" style="margin-top: 72px">
+    
+    <div class="item">
+        <a (click)="filter('')">
+            <img src="https://rukminim2.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+        </a>
+        <h6>TOP OFFERS</h6> 
+
+    </div>
+    <div class="item">
+        <a  (click)="filter('electronics')">
+            <img src="https://rukminim2.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100" alt="">
+        </a>
+        <h6>Mobiles</h6>
+        
+
+    </div>
+    <div class="item">
+        <a (click)="filter('fashion')" >
+            <img src="https://rukminim2.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+        </a>
+        
+        <h6>electronics</h6>
+
+    </div>
+
+    <div class="item">
+        <a (click)="filter('jewelery')">
+            <img src="https://rukminim2.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100" alt="">
+        </a>
+        <h6>applliances</h6>
+        
+        
+
+    </div>
+</div>
+</div> -->
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="https://vlebazaar.in/image/cache/catalog/newslider/router-1800x350.jpg" class="d-block w-100" alt="..." style="margin-top: 87px;">
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://vlebazaar.in/image/cache/catalog/newslider/PRINTER-1800x350.jpg" class="d-block w-100" alt="..."style="margin-top: 87px;">
+      <div class="carousel-caption d-none d-md-block">
+      
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+      <img src="https://vlebazaar.in/image/cache/catalog/newslider/gaming-1800x350.jpg" class="d-block w-100" alt="..." style="margin-top: 87px;">
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+      <img src="https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/1/AmazonStores/A21TJRUUN4KGV/bc9f284af4933999b3434de87f1d9716.w3000.h600._CR0%2C0%2C3000%2C600_SX1920_.png" class="d-block w-100" alt="..." style="margin-top: 82px;">
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+    <div class="carousel-item"data-bs-interval="10000">
+      <img src="https://vlebazaar.in/image/cache/catalog/%20fgvjhfgvh/banner-1800x350.jpg" class="d-block w-100" alt="..." style="margin-top: 87px;">
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- <div class="container " >
+  <div class="row">
+    <h5 style="text-align: center; margin-top: 20px; font:bolder;">LATEST  PRODUCT</h5>
+    <ng-container *ngFor="let item of filtercategory |  filter: searchkey:'title'"> 
+      <div class="card col-md-2">
+
+        <img src="{{item.image}}" alt="">
+        <h5 style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis ; max-width:100ch ; "> {{item.title}}</h5>
+        <p style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis ; max-width:100ch;" >{{item.description}}</p>
+        <p><strong>Price:</strong>{{item.price}}</p>
+        <button  class="btn1 btn-success " style="background-color: blueviolet;" (click)="addtocart(item)">  Add to cart</button>
+      </div>
+  
+
+    </ng-container>
+    
+
+  </div>
+</div> -->
+<div class="context">
+
+<!-- <section class="container my-5"   id="Gallery" style="background-color: aqua;">
+  
+
+  <div class="row">
+    <h3 class="display-5">Our <span>Gallery</span></h3>
+<ng-container *ngFor="let item of filtercategory |  filter: searchkey:'title'"> 
+  
+  <div class="col-md-3 my-3">
+    <div class="box shadow p-2 my-3" style="background-color: white; ">
+    <div class="overlay-box">
+  <img src="{{item.image}}"  class="img-fluid"  alt="Gallery">
+  <h5 style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis ; max-width:100ch ;color: black; "> {{item.title}}</h5>
+        <p style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis ; max-width:100ch;color: black;" >{{item.description}}</p>
+        <p style="color: black;"><strong>Price:</strong>{{item.price}}</p>
+  <div class="icon-overlay-box">
+   
+    <button class="btn btn-dark shadow rounded-pill" style="align-items: center;"  (click)="addtocart(item)">Add to cart</button>
+  </div>
+    </div>
+  </div>
+  </div>
+
+</ng-container>
+</div>
+
+</section>
+
+</div> -->
+
+
+<div class="card-top container-fluid" style="margin-top: 15px;">
+  <div class="container d-flex">
+      <div class="item">
+          <a (click)="filter('')">
+              <img src="https://dao54xqhg9jfa.cloudfront.net/Category/f78249a3-c0c5-caae-a743-5b3669471b19/original/1601901874.191--2020-10-0518_14_34--472.png?format=webp" alt="">
+              <h6>All items</h6>
+          </a>
+      </div>
+
+      <div class="item">
+        <a (click)="filter('Laptop')">
+            <img style="width: 62px; margin-top: 12px;" src="https://m.media-amazon.com/images/I/81mjdQjyR6L._AC_UY327_FMwebp_QL65_.jpg" alt="">
+            <h6>Laptops</h6>
+        </a>
+    </div>
+
+      <div class="item">
+          <a (click)="filter('Keyboard')">
+              <img style="width: 62px; margin-top: 26px;" src="https://m.media-amazon.com/images/I/71w9I5LAUZL._AC_UY327_FMwebp_QL65_.jpg" alt="">
+              <h6>Keyboard</h6>
+          </a>
+      </div>
+      <div class="item">
+          <a (click)="filter('Mouse')">
+              <img src="https://m.media-amazon.com/images/I/61UxfXTUyvL._SX522_.jpg" alt="">
+              <h6>Mouse</h6>
+          </a>
+      </div>
+      <div class="item">
+          <a (click)="filter('Monitors')">
+              <img style="width: 62px; margin-top: 12px;" src="https://m.media-amazon.com/images/I/81BNy2iSJKL._AC_UY327_FMwebp_QL65_.jpg" alt="">
+              <h6>Monitors</h6>
+          </a>
+      </div>
+      <div class="item">
+        <a (click)="filter('Rgb Light')">
+            <img style="width: 62px; margin-top: 5px;" src="https://m.media-amazon.com/images/I/516Z15+9d0L._AC_UL480_FMwebp_QL65_.jpg" alt="">
+            <h6>Rgb Light</h6>
+        </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('Cpu')">
+          <img style="width: 62px; margin-top: -3px;" src="https://m.media-amazon.com/images/I/61CSx8SOBXL._AC_UY327_FMwebp_QL65_.jpg" alt="">
+          <h6>Cpu</h6>
+      </a>
+  </div>
+  <div class="item">
+    <a (click)="filter('Ups')">
+        <img style="width: 62px; margin-top: 16px;" src="https://m.media-amazon.com/images/I/714mJbdF3PL._AC_UY327_FMwebp_QL65_.jpg" alt="">
+        <h6>Ups</h6>
+    </a>
+</div>
+<div class="item">
+  <a (click)="filter('Fan')">
+      <img style="width: 62px; margin-top: 14px;" src="https://m.media-amazon.com/images/I/518W2X0vwkL._AC_UY327_FMwebp_QL65_.jpg" alt="">
+      <h6>Fan</h6>
+  </a>
+</div>
+<div class="item">
+<a (click)="filter('Cabinet')">
+    <img style="width: 62px; margin-top:0px;" src="https://m.media-amazon.com/images/I/712+6mvvmOS._AC_UY327_FMwebp_QL65_.jpg" alt="">
+    <h6>Cabinet</h6>
+</a>
+</div>
+<div class="item">
+  <a (click)="filter('Router')">
+      <img style="width: 62px; margin-top:16px;" src="https://m.media-amazon.com/images/I/51ax8peHlPL._AC_UY327_FMwebp_QL65_.jpg" alt="">
+      <h6>Router</h6>
+  </a>
+  </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <ng-container *ngFor="let item of filtercategory |  filter: searchkey:'title'">
+          <div class="card col-md-3">
+              <img src="{{item.image}}" alt="">
+              <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;font-family: fantasy;">{{item.title}}</h5>
+              <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;font-family: sans-serif;">{{item.description}}</p>
+              <p style="font-weight: bolder;"><strong>Price:</strong> Rs.{{item.price}}</p>
+              <button class="btn btn-danger" (click)=addtocart(item)>Add to cart</button>
+          </div>
+      </ng-container>
+
+  </div>
+</div>
+
+
+
+
+<!-- <div class="wrapper">
+  <div class="row">
+    <ng-container *ngFor="let item of filtercategory |  filter: searchkey:'title'">
+        <div class="card col-md-3">
+
+  <div class="card text-center">
+
+      <div class="image">   <img src="{{item.image}}" alt="" width="300"> </div>
+      <div class="about-product text-center">
+          <h3>COX Headphone</h3>
+          <h4>$99.<small>99</small></h4> <button class="btn btn-success buy-now">Buy Now</button>
+      </div>
+  </div>
+</div>
+</ng-container>
+</div>
+</div> -->
+
+<div class="container bg-white">
+  <h2>Latest Products</h2>
+  <div class="row">
+      <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+          <div class="product"> <img src="https://vlebazaar.in/image/cache/catalog/new%20lap/new-300x300.jpg" alt="">
+              <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                  <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                  <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                  <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+              </ul>
+          </div>
+          <div class="tag bg-red">Best Selling</div>
+          <div class="title pt-4 pb-1">Laptops</div>
+          <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+          <div class="price"> STARTING FROM ₹ 2000.0</div>
+      </div>
+      <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+          <div class="product"> <img src="https://vlebazaar.in/image/cache/catalog/new%20lap/keyboared-and-mouse-300x300.jpg" alt="">
+              <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                  <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                  <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                  <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+              </ul>
+          </div>
+          <div class="tag bg-warning">out of stock</div>
+          <div class="title pt-4 pb-1">kEYBOARD</div>
+          <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+          <div class="price"> STARTING FROM ₹ 4000.0</div>
+      </div>
+      <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+          <div class="product"> <img src="https://vlebazaar.in/image/cache/catalog/new%20lap/gc-300x300.jpg" alt="">
+              <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                  <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                  <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                  <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+              </ul>
+          </div>
+          <div class="tag bg-green">latest</div>
+          <div class="title pt-4 pb-1"> GRAPHICS CARD</div>
+          <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+          <div class="price"> STARTING FROM  ₹ 5000.0</div>
+      </div>
+      <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+          <div class="product"> <img  src="https://vlebazaar.in/image/cache/catalog/new%20lap/gt-300x300.jpg" alt="">
+              <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                  <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                  <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                  <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+              </ul>
+          </div>
+          <div class="title pt-4 pb-1">GARAPHICS TABLEY</div>
+          <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+          <div class="price"> STARTING FROM ₹ 1000.0</div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+          <div class="product"> <img src="https://vlebazaar.in/image/cache/catalog/new%20lap/cooling-pad-300x300.jpg" alt="">
+              <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                  <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                  <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                  <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+              </ul>
+          </div>
+          <div class="tag bg-red">Best Selling</div>
+          <div class="title pt-4 pb-1"> COOLING PAD</div>
+          <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+          <div class="price"> STARTING FROM ₹ 3000.0</div>
+      </div>
+      <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+          <div class="product"> <img src="https://vlebazaar.in/image/cache/catalog/new%20lap/tv-300x300.jpg" alt="">
+              <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                  <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                  <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                  <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+              </ul>
+          </div>
+          <div class="tag bg-warning">out of stock</div>
+          <div class="title pt-4 pb-1">TV STICK</div>
+          <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+          <div class="price"> STARTING FROM ₹ 5000.00</div>
+      </div>
+      <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+          <div class="product"> <img src="https://vlebazaar.in/image/cache/catalog/category%20images/1-1000x1000.jpg" alt="red dress">
+              <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                  <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                  <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                  <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+              </ul>
+          </div>
+          <div class="title pt-4 pb-1">TOP pHONES</div>
+          <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+          <div class="price"> STARTING FROM ₹ 10000.00</div>
+      </div>
+      <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+          <div class="product"> <img src="https://vlebazaar.in/image/cache/catalog/new%20lap/usb-gad-300x300.jpg" alt="">
+              <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                  <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                  <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                  <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+              </ul>
+          </div>
+          <div class="tag bg-green">new</div>
+          <div class="title pt-4 pb-1"> USB CABLE</div>
+          <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
+          <div class="price"> STARTING FROM ₹ 2000</div>
+      </div>
+  </div>
+</div>
+<footer class="text-center text-white" style="background-color: #caced1;">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Images -->
+    <section class="">
+      <div class="row">
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Images -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    vlebazaar © 2020 Copyright:
+    <a class="text-white" href="http://localhost:4200/home"></a>
+  </div>
+  <!-- Copyright -->
+</footer>

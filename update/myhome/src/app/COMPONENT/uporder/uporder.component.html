@@ -1,0 +1,185 @@
+<app-header></app-header>
+<div id="booking" class="section">
+
+  <div class="section-center">
+    <div class="container">
+
+  
+      <div class="row">
+        <div class="booking-form" style="margin-right: -14px;margin-top: 1px;">
+          <div class="form-header">
+            <h1>YOUR ORDER DETAILS</h1>
+          </div>
+          <div class="card ">
+          <table class="table   ">
+            <thead class="thead-light"  style="background-color: black;">
+              <tr>
+                  <th style="color: azure;">Title</th>
+                  <th style="color: azure;">Price</th>
+                  
+                  <th></th>
+              </tr>
+          </thead >
+            <tbody>
+              <tr *ngFor="let item of productnames">
+                <td >{{item.title}}</td>
+                <td >{{item.price}}</td>
+                
+                
+            </tr>
+            <tr>
+              <td>
+                <strong>Grand Total :</strong> {{total}}
+              </td>
+              <td><strong>Total item :</strong>{{cartitems}}</td>
+            </tr>
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+        <!-- <div class="col-lg-6">
+          <div class="card ">
+            <div class="text-center mb-4">
+              <h1>Order Details</h1>
+              
+          </div>
+          <table class="table" style="color: azure;">
+              <thead class="thead-light">
+                  <tr>
+                      <th>Title</th>
+                      <th>Price</th>
+                      
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let item of products">
+                      <td >{{item.title}}</td>
+                      <td >{{item.price}}</td>
+                      
+                      
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Grand Total :</strong> {{grandTotal}}
+                    </td>
+                    <td><strong>Total item :</strong>{{totalItem}}</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+ </div>
+</div> -->
+
+
+
+
+
+
+  
+        <div class="booking-form" style="margin-right: -14px;">
+          <div class="form-header">
+            <h1>ENTER YOUR  CUSTOMER DETAILS</h1>
+          </div>
+          <form [formGroup]="orderupForm "  (ngsubmit)="orderup()">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <span class="form-label">CUSTOMER FIRSTNAME</span>
+                  <input formControlName="firstname"class="form-control" type="text">
+                </div>
+              </div>
+            
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <span class="form-label">CUSTOMER LASTNAME</span>
+                <input formControlName="lastname" class="form-control" type="text" >
+              </div>
+            </div>
+          </div>
+          
+             <div class="form-group">
+                  <span class="form-label"> CUSTOMER ADDRESS</span>
+                  <input formControlName="address" class="form-control" type="text" >
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <span class="form-label">CUSTOMER PHONE NUMBER</span>
+                      <input  formControlName="number"  class="form-control" type="text"  >
+                    </div>
+                  </div>
+                
+    
+                <div class="col-sm-6" >
+                  <div class="form-group">
+                    <span class="form-label">CUSTOMER EMAIL</span>
+                    <input formControlName="email"  class="form-control" type="text">
+          
+                  </div>
+                </div>
+
+              </div>
+              <div class="form-btn">
+								<button  type="submit"   data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="orderup()" class="submit-btn">Order Now</button>
+							</div>
+             
+              
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+              <form  [formGroup]="payForm"  > 
+                <div class="text-right"> <i class="fa fa-close close" data-dismiss="modal"></i> </div>
+                <div class="tabs mt-3">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation"> <a class="nav-link active" id="visa-tab" data-toggle="tab" href="#visa" role="tab" aria-controls="visa" aria-selected="true"> <img src="https://i.imgur.com/sB4jftM.png" width="80"> </a> </li>
+                        
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="visa" role="tabpanel" aria-labelledby="visa-tab">
+                            <div class="mt-4 mx-4">
+                                <div class="text-center">
+                                    <h5>Credit card</h5>
+                                </div>
+                                <div class="form mt-3">
+                                    <div class="inputbox"> <input formControlName="cardholdername" type="text" name="name" class="form-control" required="required"> <span>Cardholder Name</span> </div>
+                                    <div class="inputbox"> <input formControlName="cardnumber" type="text" name="name" min="1" max="999" class="form-control" required="required"> <span>Card Number</span> <i class="fa fa-eye"></i> </div>
+                                    <div class="d-flex flex-row">
+                                        <div class="inputbox"> <input  formControlName="expirydate" type="text" name="name" min="1" max="999" class="form-control" required="required"> <span>Expiration Date</span> </div>
+                                        <div class="inputbox"> <input formControlName="cvv" type="text" name="name" min="1" max="999" class="form-control" required="required"> <span>CVV</span> </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <div class="px-5 pay"> <button   class="btn btn-success btn-block" (click)="Payment()">BUY NOW</button> </div>
+                                </div>
+                                <div class="px-5 pay"> <button  id="cancel" class="btn btn-success btn-block" data-bs-dismiss="modal">CANCEL</button> </div>
+                                
+                              </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+              </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

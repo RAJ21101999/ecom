@@ -1,0 +1,81 @@
+
+<h1 style="text-align: center; color: yellow;"> WELCOME TO THE PRODUCT PANEL</h1>
+
+
+
+<div class="container-fluid" style="margin-top: 200px;">
+<button  style="margin-left: 650px;" type="button" id="add-btn" class="btn btn-success" (click)="clickAddproduct()" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product</button>
+<button routerLink="/home" class="btn btn-danger mx-3">Logout</button>
+
+<table class="table mt-3 table-responsive">
+    <thead style="color: azure;"> 
+        <tr>
+            <th >PRODUCT ID</th>
+            <th >TITLE</th>
+            <th >PRICE</th>
+            <th >CATEGORY</th>
+            <th >IMAGE</th>
+           
+            <th >Action</th>
+        </tr>
+    </thead>
+    <tbody style="color: azure;">
+        <tr *ngFor="let row of productData">
+
+            <td>{{row.id}}</td>
+            <td >{{row.title}}</td>
+            <td>{{row.price}}</td>
+            <td>{{row.category}}</td>
+            <td><img  style="height: 60px; width:30px" src="{{row.image}}" alt=""></td>
+            
+            <td style="text-align: center;">
+                <!-- [disabled]="role==='Employee'" -->
+                <button style="color: #fff;" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info" (click)="onEdit(row)">Edit</button>
+                <button  style="color: #fff;" class="btn btn-danger mx-3" (click)="deleteproductDetail(row)">Delete</button>
+            </td>
+        </tr>
+      
+        
+    </tbody>
+</table>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">PRODUCT Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formValue">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">TITLE</label>
+                        <input type="text" formControlName="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">PRICE</label>
+                        <input type="text" formControlName="price" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">DESCRIPTION</label>
+                        <input type="email" formControlName="description" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">CATEGORY</label>
+                        <input type="text" formControlName="category" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">IMAGE</label>
+                        <input type="text" formControlName="image" class="form-control" id="exampleInputPassword1">
+                    </div>
+                  
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="close" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" *ngIf="showAdd" (click)="postproductDetails()" class="btn btn-primary">Add</button>
+                <button type="button" *ngIf="showUpdate" (click)="editproductDetail()" class="btn btn-primary">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
